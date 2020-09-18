@@ -263,9 +263,10 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0-java
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor
 
 # Init
 PRODUCT_COPY_FILES += \
@@ -495,11 +496,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-v29.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-v29.so
-
-# HWBinder
-PRODUCT_PACKAGES += \
-    libhwbinder \
-    libhwbinder.vendor
 
 # Weaver
 PRODUCT_PACKAGES += \

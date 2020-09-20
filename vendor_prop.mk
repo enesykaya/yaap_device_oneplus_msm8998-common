@@ -186,6 +186,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=400 \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno \
     ro.opengles.version=196610 \
     ro.sf.hwc_set_default_colormode=true \
     debug.sf.disable_backpressure=1 \
@@ -331,6 +333,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # SurfaceFlinger
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.protected_contents=true \
     debug.sf.early_phase_offset_ns=11600000 \

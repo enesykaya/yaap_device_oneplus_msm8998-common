@@ -10,9 +10,6 @@ allow system_app sysfs_switch:file { rw_file_perms };
 allow system_app sysfs_fpc:dir { r_dir_perms };
 allow system_app sysfs_fpc:file { rw_file_perms };
 
-# Allow system app to access for camera prop
-get_prop(system_app, persist_camera_prop)
-
 allow system_app sysfs_dm:file { rw_file_perms };
 allow system_app sysfs_graphics:file { rw_file_perms };
 allow system_app sysfs_graphics:dir { search };
@@ -23,4 +20,3 @@ allow system_app sysfs_vibrator:file { rw_file_perms };
 allow system_app sysfs_vibrator:dir { search };
 allow system_app proc_key_rep:file { rw_file_perms };
 
-allow system_app system_suspend_control_service:service_manager find;
